@@ -1,2 +1,7 @@
-class BinarySearch {
+fun main() {
+
+}
+
+class BinarySearch(){
+
 }
