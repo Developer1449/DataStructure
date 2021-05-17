@@ -1,8 +1,15 @@
 fun main() {
-  var binarySearch = BinarySearch()
+  var array = arrayOf(5,6,15,20,60,80)
+  var binarySearch = BinarySearch(array)
 
 }
 
-class BinarySearch(){
+class BinarySearch constructor(array: Array<Int>){
+
+  companion object{
+    fun search(num:Int){
+
+    }
+  }
 
 }
