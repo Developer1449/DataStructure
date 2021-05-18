@@ -1,6 +1,7 @@
 fun main() {
 
   var array = intArrayOf(5, 6, 15, 20, 60, 80)
+  System.out.println("Demo Msg")
   val index = binarySearch(array,60,0,array.size-1)
   when{
     index > 0 -> System.out.println("Element found at index $index")
