@@ -7,7 +7,7 @@ fun main() {
 class BinarySearch constructor(array: Array<Int>){
 
     fun searchNumber(num:Int){
-
+        System.out.println(num.toString())
     }
 
 }
