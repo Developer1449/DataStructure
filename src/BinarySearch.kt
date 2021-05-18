@@ -4,10 +4,11 @@ fun main() {
 
 }
 
+
 class BinarySearch constructor(array: Array<Int>){
 
   companion object{
-    fun search(num:Int){
+    fun searchNumber(num:Int){
 
     }
   }
