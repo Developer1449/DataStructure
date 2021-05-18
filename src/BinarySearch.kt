@@ -1,5 +1,5 @@
 fun main() {
-    System.out.println("Hello world")
+    System.out.println("Hello world Project")
 }
 
 fun binarySearch(array: IntArray,num:Int, start:Int, end:Int): Int{
