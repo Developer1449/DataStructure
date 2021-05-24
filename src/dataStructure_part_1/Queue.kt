@@ -42,7 +42,7 @@ class SimpleQueue(){
 
     fun deQueue(){
        when(isEmpty()){
-           true -> System.out.println("Array is Empty")
+           true -> System.out.println("Array is ")
            false -> {
                System.out.println("${array[front].value} is removed")
                array.removeAt(front)
