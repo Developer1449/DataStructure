@@ -1,7 +1,6 @@
 package dataStructure_part_1
 
-import com.sun.org.apache.xpath.internal.operations.Bool
-const val SIZE = 5
+data class Queue(val value:String)
 
 fun main() {
 
@@ -11,19 +10,12 @@ fun main() {
     simpleQueue.deQueue()
     simpleQueue.peek()
     simpleQueue.deQueue()
-
-
 }
 
-data class Queue(val value:String)
 
-class SimpleQueue(){
+class SimpleQueue(): QueueAction() {
 
-    var array = ArrayList<Queue>(SIZE)
-    var front = -1
-    var rear = -1
-
-    fun enQueue(item: Queue){
+    override fun enQueue(item: Queue){
 
         when(!isFull()){
             true ->{
@@ -33,18 +25,18 @@ class SimpleQueue(){
                     rear++
                 }
                 else rear++
-                System.out.println("${item.value} is added")
+                println("${item.value} is added")
             }
-            false -> System.out.println("Array is Full")
+            false -> queueFull()
         }
 
     }
 
-    fun deQueue(){
+    override fun deQueue(){
        when(isEmpty()){
-           true -> System.out.println("Array is Empty")
+           true -> queueEmpty()
            false -> {
-               System.out.println("${array[front].value} is removed")
+              println("${array[front].value} is removed")
                array.removeAt(front)
                if(front == rear){
                    front --
@@ -56,16 +48,10 @@ class SimpleQueue(){
        }
     }
 
-    fun isEmpty():Boolean =  front == -1
+    override fun isEmpty():Boolean =  front == -1
 
-    fun isFull():Boolean = rear == SIZE-1 && front == -1
+    override fun isFull():Boolean = rear == SIZE-1 && front == -1
 
-    fun peek(){
-            when(isEmpty()){
-                true -> System.out.println("Array is Empty")
-                false -> System.out.println("First Element is ${array[front].value}")
-            }
-    }
 
 }
 
