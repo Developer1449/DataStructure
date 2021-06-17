@@ -52,7 +52,6 @@ class SimpleQueue(): QueueAction() {
 
     override fun isFull():Boolean = rear == SIZE-1 && front == -1
 
-
 }
 
 
